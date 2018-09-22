@@ -18,41 +18,64 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="{% static 'img/logo.png' %}" width="60" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">РЦР <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  href="http://altay.roskazna.ru">УФК по Алтайскому краю</a>
-                </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    РЦР
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Регламент РЦР</a>
+                    <a class="dropdown-item" href="#">Бланики, инструкции, сертификаты</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Извещения о получении сертификатов</a>
+                </div>
+            </li>
 
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
-            </form>
-        </div>
-    </nav>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    СТАТИСТИКА
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Статистика размещения www.bus.gov.ru</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Статистика размещения www.zakupki.gov.ru</a>
+                </div>
+            </li>
 
-    <div class="container">
-        <div class="row">
-            <div class="col md-10">
-                {% block content %}
-                {% endblock %}
-            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="http://altay.roskazna.ru">УФК ПО АЛТАЙСКОМУ КРАЮ</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+        </form>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col md-10">
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
+</div>
 </body>
 </html>
