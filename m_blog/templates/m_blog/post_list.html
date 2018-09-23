@@ -1,17 +1,31 @@
 {% extends 'm_blog/base.html' %}
 
 {% block content %}
-    
 
-    
-     {% for post in posts %}
-        <div class="Post mr-10px">
-            <h2>{{ post.title }}</h2>
-             {% autoescape off %}
-                {{ post.text|truncatewords:15 }}
-             {% endautoescape %}
-            <h6>{{ post.author.get_full_name }}{{ post.date_create }}</h6>
-        </div>
-     {% endfor %}
+
+
+
+        {% for post in posts %}
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    Создан: {{ post.date_create }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">
+                        {% autoescape off %}
+                            {{ post.text|truncatewords:15 }}
+                        {% endautoescape %}
+                    </p>
+                    <a href="#" class="btn btn-primary">Читать все...</a>
+                </div>
+                <div class="card-footer text-muted text-right">
+                    Автор: {{ post.author.get_full_name }}
+                </div>
+            </div>
+
+        {% endfor %}
+
 
 {% endblock %}
