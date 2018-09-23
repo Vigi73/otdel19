@@ -1,5 +1,14 @@
 {% extends 'm_blog/base.html' %}
 
 {% block content %}
-  <h1> Hello</h1>
+ {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+
+
+     {% autoescape off %}
+        {{ post.text|truncatewords:15 }}
+     {% endautoescape %}
+
+ {% endfor %}
+
 {% endblock %}
