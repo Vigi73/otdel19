@@ -1,14 +1,16 @@
 {% extends 'm_blog/base.html' %}
 
 {% block content %}
- {% for post in posts %}
-    <h2>{{ post.title }}</h2>
+    
 
-
-     {% autoescape off %}
-        {{ post.text|truncatewords:15 }}
-     {% endautoescape %}
-
- {% endfor %}
+    
+     {% for post in posts %}
+        <div class="Post mr-10px">
+            <h2>{{ post.title }}</h2>
+             {% autoescape off %}
+                {{ post.text|truncatewords:15 }}
+             {% endautoescape %}
+        </div>
+     {% endfor %}
 
 {% endblock %}
