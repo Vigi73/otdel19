@@ -9,7 +9,7 @@
 
             <div class="card m-3">
                 <div class="card-header">
-                    Создан: {{ post.date_create }}
+                   <i class="fa fa-calendar-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
@@ -18,7 +18,7 @@
                             {{ post.text|truncatewords:15 }}
                         {% endautoescape %}
                     </p>
-                    <a href="#" class="btn btn-primary">Читать все...</a>
+                    <a href="#" class="btn btn-info">Читать далее...</a>
                 </div>
                 <div class="card-footer text-muted text-right">
                     Автор: {{ post.author.get_full_name }}
