@@ -1,13 +1,9 @@
 {% extends 'm_blog/base.html' %}
 
+
 {% block content %}
 
-
-
-
-        {% for post in posts %}
-
-            <div class="card m-3">
+    <div class="card m-3">
                 <div class="card-header">
                    <i class="fa fa-calendar-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
                 </div>
@@ -15,17 +11,14 @@
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">
                         {% autoescape off %}
-                            {{ post.text|truncatewords:15 }}
+                            {{ post.text|linebreaksbr }}
                         {% endautoescape %}
                     </p>
-                    <a href="{% url 'post_detail_url' pk=post.pk %}" class="btn btn-info">Читать далее...</a>
+
                 </div>
                 <div class="card-footer text-muted text-right">
                     Автор: {{ post.author.get_full_name }}
                 </div>
             </div>
-
-        {% endfor %}
-
 
 {% endblock %}
