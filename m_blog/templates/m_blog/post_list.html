@@ -7,12 +7,12 @@
 
         {% for post in posts %}
 
-            <div class="card m-3">
+            <div class="card m-2">
                 <div class="card-header">
                    <i class="fa fa-calendar-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
+                    <h3 class="card-title">{{ post.title }}</h3>
                     <p class="card-text">
                         {% autoescape off %}
                             {{ post.text|truncatewords:15 }}
@@ -20,7 +20,8 @@
                     </p>
                     <a href="{% url 'post_detail_url' pk=post.pk %}" class="btn btn-info">Читать далее...</a>
                 </div>
-                <div class="card-footer text-muted text-right">
+                <div class="card-footer text-muted text-right ft_font">
+                   <i class="fa fa-user-circle" aria-hidden="true"></i>
                     Автор: {{ post.author.get_full_name }}
                 </div>
             </div>

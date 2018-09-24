@@ -3,24 +3,27 @@
 
 {% block content %}
 
-    <div class="card m-3">
+    <div class="card m-2">
                 <div class="card-header">
                    <i class="fa fa-calendar-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
+                    <h3 class="card-title">{{ post.title }}</h3>
                     <p class="card-text">
                         {% autoescape off %}
                             {{ post.text|linebreaksbr }}
                         {% endautoescape %}
                     </p>
                     <div class="p">
-
+                        <a href="{% url 'post_list_url' %}"><i class="fa fa-arrow-left " aria-hidden="true"> Назад</i></a>
                     </div>
                 </div>
-                <div class="card-footer text-muted text-auto">
-                    <a href="{% url 'post_list_url' %}"><i class="fa fa-arrow-left " aria-hidden="true"> Назад</i></a>
-                    <div class="text-right">Автор: {{ post.author.get_full_name }}</div>
+                <div class="card-footer text-muted text-auto ft_font">
+
+                    <div class="text-right">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        Автор: {{ post.author.get_full_name }}
+                    </div>
                 </div>
             </div>
 

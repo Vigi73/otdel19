@@ -8,3 +8,8 @@ body {
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
     color: #fffd9a;
 }
+
+.ft_font{
+    background: #dae2cc;
+    font: #000000;
+}
