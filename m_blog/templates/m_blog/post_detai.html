@@ -14,10 +14,13 @@
                             {{ post.text|linebreaksbr }}
                         {% endautoescape %}
                     </p>
+                    <div class="p">
 
+                    </div>
                 </div>
-                <div class="card-footer text-muted text-right">
-                    Автор: {{ post.author.get_full_name }}
+                <div class="card-footer text-muted text-auto">
+                    <a href="{% url 'post_list_url' %}"><i class="fa fa-arrow-left " aria-hidden="true"> Назад</i></a>
+                    <div class="text-right">Автор: {{ post.author.get_full_name }}</div>
                 </div>
             </div>
 
