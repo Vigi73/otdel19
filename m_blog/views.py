@@ -5,7 +5,7 @@ from django.db.models import Q
 def post_list(request):
     search_query = request.GET.get('search', '')
     if search_query:
-        posts = Post.objects.filter(Q(title__contains=search_query) | Q(text__contains=search_query) | Q(date_create__day=str(search_query)))
+        posts = Post.objects.filter(Q(title__contains=search_query) | Q(text__contains=search_query))
     else:
         posts = Post.objects.all()
 
