@@ -18,13 +18,12 @@
                             {{ post.text|truncatewords:15 }}
                         {% endautoescape %}
                     </p>
-                    <div class="btn_">
-                        <a href="{% url 'post_detail_url' pk=post.pk %}" class="btn btn-info">Читать далее...</a>
-                    </div>
+
                 </div>
                 <div class="card-footer text-muted text-right ft_font">
-                   <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    Автор: {{ post.author.get_full_name }}
+                   <div class="btn_">
+                        <a href="{% url 'post_detail_url' pk=post.pk %}" class="btn btn-info">Читать далее...</a>
+                    </div>
                 </div>
             </div>
 
