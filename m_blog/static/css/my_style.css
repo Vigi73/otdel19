@@ -17,3 +17,7 @@ body {
 .btn_ {
     text-align: right;
 }
+
+.text-center {
+    margin-bottom: -10px;
+}
