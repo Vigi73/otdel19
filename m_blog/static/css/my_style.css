@@ -22,5 +22,9 @@ body {
     font-family: 'Lobster', cursive;
     font-size: 25px;
     color: #0f7aff;
+}
 
+/*Цвет текста в Карусели*/
+.color_item {
+    color: #ffffc6;
 }
