@@ -1,0 +1,23 @@
+{% extends 'blanks/blanks_base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Бланки - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="list-group m-3">
+  <a href="#" class="list-group-item list-group-item-action active text-center">
+    <i class="fa fa-file-text " aria-hidden="true"></i> БЛАНКИ ДОКУМЕНТОВ, ИНСТРУКЦИИ
+  </a>
+  <a href="{% static 'files/blanks/DogovorТОФК2018.doc' %}" class="list-group-item list-group-item-action">1. Договор присоединения (соглашения)</a>
+  <a href="#" class="list-group-item list-group-item-action">2. Morbi leo risus</a>
+  <a href="#" class="list-group-item list-group-item-action">3. Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-action">4. Vestibulum at eros</a>
+</div>
+
+
+{% endblock %}

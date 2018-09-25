@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'm_blog',
     'ckeditor',
     'ckeditor_uploader',
+    'blanks',
 
 ]
 
