@@ -17,8 +17,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Caveat|Lobster|Roboto+Condensed" rel="stylesheet">
-    <title>Document</title>
+    <link  href="https://fonts.googleapis.com/css?family=Caveat|Lobster|Roboto+Condensed" rel="stylesheet">
+    <title>
+        {% block title %}
+            Отдел 19
+        {% endblock %}
+    </title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -98,7 +102,7 @@
             <img class="d-block w-100" src="{% static 'img/carusel/kazna.jpg' %}" alt="First slide">
 
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Отдел № 19</h5>
+                <h6>Отдел № 19</h6>
                 <p>Управления Федерального казначейства</p>
             </div>
 
@@ -108,7 +112,7 @@
             <img class="d-block w-100" src="{% static 'img/carusel/tm.jpg' %}" alt="Second slide">
 
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Шевчук Татьяна Михайловна</h5>
+                <h6>Шевчук Татьяна Михайловна</h6>
                 <p>Начальник отдела</p>
             </div>
         </div>
@@ -116,7 +120,7 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'img/carusel/sz.jpg' %}" alt="Third slide">
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Зимин Сергей Владимирович</h5>
+                <h6>Зимин Сергей Владимирович</h6>
                 <p>Заместитель начальника отдела</p>
             </div>
         </div>
@@ -124,7 +128,7 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'img/carusel/ee.jpg' %}" alt="4">
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Егиоя Евгений Николаевич</h5>
+                <h6>Егиоя Евгений Николаевич</h6>
                 <p>Ведущий специалист-эксперт</p>
             </div>
         </div>
@@ -132,7 +136,7 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'img/carusel/ov.jpg' %}" alt="5">
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Кот Оксана Викторовна</h5>
+                <h6>Кот Оксана Викторовна</h6>
                 <p>Старший специалист 2 разряда</p>
             </div>
         </div>
@@ -140,7 +144,7 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'img/carusel/iv.jpg' %}" alt="6">
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Кремлева Ирина Владимировна</h5>
+                <h6>Кремлева Ирина Владимировна</h6>
                 <p>Старший специалист 3 разряда</p>
             </div>
         </div>
@@ -148,7 +152,7 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'img/carusel/ln.jpg' %}" alt="7">
             <div class="carousel-caption d-none d-md-block color_item">
-                <h5>Надеева Любовь Николаевна</h5>
+                <h6>Надеева Любовь Николаевна</h6>
                 <p>специалист 1 разряда</p>
             </div>
         </div>

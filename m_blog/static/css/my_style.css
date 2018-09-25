@@ -11,7 +11,7 @@ body {
 
 .ft_font{
     background: #dae2cc;
-    font: #000000;
+
 }
 
 .btn_ {
@@ -26,5 +26,9 @@ body {
 
 /*Цвет текста в Карусели*/
 .color_item {
-    color: #ffffc6;
+    color: #ffffff;
+}
+
+.color_item p {
+    font-size: 12px;
 }

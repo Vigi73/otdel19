@@ -1,9 +1,11 @@
 {% extends 'm_blog/base_m_blog.html' %}
 
+{% block title %}
+    Список - {{ block.super }}
+{% endblock %}
+
+
 {% block content %}
-
-
-
 
         {% for post in posts %}
 
