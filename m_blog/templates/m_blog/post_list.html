@@ -14,7 +14,7 @@
                    <i class="fa fa-calendar-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
                 </div>
                 <div class="card-body">
-                    <h2 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title }}</h2>
+                    <a href="{% url 'post_detail_url' pk=post.pk %}"><h2 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title }}</h2></a>
                     <hr>
                     <p class="card-text">
                         {% autoescape off %}
