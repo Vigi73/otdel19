@@ -26,9 +26,14 @@ body {
 
 /*Цвет текста в Карусели*/
 .color_item {
-    color: #ffffff;
+    color: #000;
+}
+
+.carousel-caption {
+    font-size: 12px;
 }
 
 .color_item p {
+
     font-size: 12px;
 }
