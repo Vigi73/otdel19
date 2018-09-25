@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
     <link  href="https://fonts.googleapis.com/css?family=Caveat|Lobster|Roboto+Condensed|PT+Sans|Arimo|Neucha " rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
     <title>
         {% block title %}
             Отдел 19
@@ -112,6 +113,7 @@
         </div>
 
         <div class="carousel-item">
+
             <img class="d-block w-100" src="{% static 'img/carusel/tm.jpg' %}" alt="Second slide">
 
             <div class="carousel-caption d-none d-md-block">
@@ -182,6 +184,55 @@
     </div>
 </div>
 
+<footer>
+    <div class="contener">
+        <ul>
+            <li>
+                <p class="home"> <i class="fa fa-home" aria-hidden="true"></i> Организация</p>
+
+                <ul>
+                    <li><a href="#">Отдел № 19</a></li>
+                    <li><a href="#">УФК по Алтайскому краю</a></li>
+                    <li><a href="#">с. Курья, ул Советская 44</a></li>
+
+                </ul>
+
+
+            </li>
+            <li>
+                <p class="services"><i class="fa fa-cogs" aria-hidden="true"></i> Функции</p>
+                <ul>
+                    <li><a href="#">Сертификация клиентов</a></li>
+                    <li><a href="#">Кассовое обслуживание</a></li>
+                    <li><a href="#">Контроль в сфере закупок</a></li>
+    {#                <li><a href="#">Web & Дизайн</a></li>#}
+                </ul>
+            </li>
+            <li>
+                <p class="reachus"><i class="fa fa-wifi" aria-hidden="true"></i> Связь</p>
+                <ul>
+                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email:</a> tofk-1724@mail.ru</li>
+                    <li><a href="#"><i class="fa fa-fax" aria-hidden="true"></i> :</a> (385-76)23219</li>
+                    <li><a href="#"> <i class="fa fa-fax" aria-hidden="true"></i> :</a> (385-76)22207</li>
+
+                </ul>
+            </li>
+            <li>
+                <p class="clients"> <i class="fa fa-clock-o" aria-hidden="true"></i> Режим работы</p>
+                <ul>
+                    <li><a href="#">Пн-Чт&nbsp; <i
+                        class="fa fa-mars" aria-hidden="true"></i> 8<sup>00</sup> - 17<sup>00</sup>&nbsp; : &nbsp; <i
+                        class="fa fa-venus" aria-hidden="true"></i> 8<sup>00</sup> - 16<sup>00</sup></a></li>
+                    <li><a href="#">Пт:&nbsp;
+                    <i class="fa fa-mars" aria-hidden="true"></i><i class="fa fa-venus"
+                                                                    aria-hidden="true"></i> 8<sup>00</sup> -
+                    16<sup>00</sup></a></li>
+{#                    <li><a href="#">FAQ</a></li>#}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
