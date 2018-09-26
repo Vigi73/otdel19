@@ -44,3 +44,7 @@ body {
     color: rgba(0, 0, 0, 0.87);
     font-family: 'Lobster', cursive;
 }
+
+.back_post{
+    background-color: #0E2231;
+}
