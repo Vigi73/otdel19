@@ -11,7 +11,7 @@
 
         <div class="card m-2">
             <div class="card-header">
-                <i class="fa fa-calendar-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
+                <i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Создан: {{ post.date_create }}
             </div>
             <div class="card-body">
                 <a href="{% url 'post_detail_url' pk=post.pk %}"><h2 class="card-title"><i class="fa fa-file-text-o"

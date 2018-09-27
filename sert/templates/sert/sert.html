@@ -9,19 +9,22 @@
     {% for sert_list in sert_lists %}
 
         <div class="card m-2">
-        <img class="card-img-center" src="{% static 'img/exchanges.png' %}" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title text-center">{{ sert_list.s_title }} </h5>
-            <p class="text-right">{{ sert_list.s_date_create }}</p>
+            <img class="card-img-center" src="{% static 'img/exchanges.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center">{{ sert_list.s_title }} </h5>
+                <p class="text-right"><i class="fa fa-calendar-plus-o"
+                                         aria-hidden="true"></i> {{ sert_list.s_date_create }}</p>
 
-            <p class="">
-                {% autoescape off %}
+                <p class="">
+                    {% autoescape off %}
                         {{ sert_list.s_text }}
-                {% endautoescape %}
-            </p>
-            <a href="{% url 'post_list_url' %}" class="btn btn-primary">На главную</a>
+                    {% endautoescape %}
+                </p>
+                <div class="p">
+                    <a href="{% url 'post_list_url' %}"><i class="fa fa-reply" aria-hidden="true"> На главную</i></a>
+                </div>
+            </div>
         </div>
-    </div>
     {% endfor %}
 
 

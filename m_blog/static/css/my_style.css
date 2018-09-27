@@ -48,3 +48,13 @@ body {
 .back_post{
     background-color: #dde2da;
 }
+
+.card {
+    background-color: #fffbee;
+
+}
+
+
+.card p.text-right {
+    font-family: 'Lobster', cursive;
+}
