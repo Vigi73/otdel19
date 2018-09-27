@@ -39,8 +39,9 @@
 
    {% if is_paginated %}
 
-                <nav aria-label="...">
-                    <ul class="pagination">
+
+                <nav aria-label="..." >
+                    <ul class="pagination justify-content-end">
                         <li class="page-item {% if not prev_url %} disabled {% endif %}">
                             <a class="page-link" href="{{ prev_url }}" tabindex="-1">Назад</a>
                         </li>
@@ -65,6 +66,7 @@
                         </li>
                     </ul>
                 </nav>
+
    {% endif %}
 
 

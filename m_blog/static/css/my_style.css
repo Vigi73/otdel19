@@ -58,3 +58,7 @@ body {
 .card p.text-right {
     font-family: 'Lobster', cursive;
 }
+
+.navigation_pos {
+    position: center;
+}
