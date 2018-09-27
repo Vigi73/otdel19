@@ -12,8 +12,8 @@
             <img class="card-img-center" src="{% static 'img/exchanges.png' %}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title text-center">{{ sert_list.s_title }} </h5>
-                <p class="text-right"><i class="fa fa-calendar-plus-o"
-                                         aria-hidden="true"></i> {{ sert_list.s_date_create }}</p>
+                <p class="text-right m-0"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> {{ sert_list.s_date_create }}</p>
+                <p class="text-right"><i class="fa fa-user-secret" aria-hidden="true"></i> : {{ sert_list.s_author.get_full_name }}</p>
 
                 <p class="">
                     {% autoescape off %}
