@@ -7,5 +7,6 @@ urlpatterns = [
     path('post/<pk>/', views.post_detail, name='post_detail_url'),
     path('blanks/', include('blanks.urls')),
     path('sert/', include('sert.urls')),
+    path('guest/', include('guest_book.urls')),
 
 ]

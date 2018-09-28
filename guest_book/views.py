@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def guest_list(request):
+    return render(request, 'guest_book/guest_book.html', {})
