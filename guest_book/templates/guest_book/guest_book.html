@@ -6,5 +6,16 @@
 {% endblock %}
 
 {% block content %}
-    
+    <div class="card m-2">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <form action="/your-name/" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
 {% endblock %}
