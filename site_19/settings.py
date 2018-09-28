@@ -245,7 +245,7 @@ CKEDITOR_CONFIGS = {
 
                 'autogrow',
 
-                'devtools',
+                #'devtools',
 
                 'widget',
 
