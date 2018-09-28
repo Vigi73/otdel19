@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'blanks',
     'sert',
+    'guest_book',
 
 ]
 
@@ -140,9 +141,9 @@ CKEDITOR_CONFIGS = {
 
     'default': {
 
-        'skin': 'moono',
+        #'skin': 'moono',
 
-        # 'skin': 'office2013',
+        'skin': 'office2013',
 
         'toolbar_Basic': [
 
@@ -244,7 +245,7 @@ CKEDITOR_CONFIGS = {
 
                 'autogrow',
 
-                # 'devtools',
+                'devtools',
 
                 'widget',
 
