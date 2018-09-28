@@ -141,9 +141,9 @@ CKEDITOR_CONFIGS = {
 
     'default': {
 
-        #'skin': 'moono',
+        'skin': 'moono',
 
-        'skin': 'office2013',
+        #'skin': 'office2013',
 
         'toolbar_Basic': [
 
