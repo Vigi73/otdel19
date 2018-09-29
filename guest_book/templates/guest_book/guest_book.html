@@ -63,15 +63,17 @@
 
 
 
-
     <div class="card m-2">
         <div class="card-header">
             Ваш отзыв:
         </div>
         <div class="card-body ">
+
             <form class="post-form"  method="post">
                 {% csrf_token %}
-                    {{ form.as_p }}
+                    <table >
+                        {{ form.as_p }}
+                    </table>
                 <input type="submit" value="Отправить"/>
             </form>
         </div>
