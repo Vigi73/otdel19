@@ -17,6 +17,14 @@
                         {% autoescape off %}
                             {{ post.text|linebreaks }}
                         {% endautoescape %}
+
+                    {% if post.files %}
+                        <p class="text-right mmm"><i class="fa fa-paperclip" aria-hidden="true"></i> файл:
+                            <a title="Скачать файл..." href="/{{ post.files }}"><img width="25px" src="http://www.gifki.org/data/media/470/disketa-animatsionnaya-kartinka-0032.gif"></a>
+                        </p>
+                    {% endif %}
+
+
                     </p>
                     <div class="p">
                         <a href="{% url 'post_list_url' %}"><i class="fa fa-reply" aria-hidden="true"> Назад</i></a>

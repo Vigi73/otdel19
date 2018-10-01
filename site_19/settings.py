@@ -136,6 +136,7 @@ CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'm_blog/templates/../m_blog/static')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "uploads/static", ),)
 
 CKEDITOR_CONFIGS = {
 
