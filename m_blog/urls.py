@@ -8,5 +8,6 @@ urlpatterns = [
     path('blanks/', include('blanks.urls')),
     path('sert/', include('sert.urls')),
     path('guest/', include('guest_book.urls')),
+    path('phone/', include('phone.urls')),
 
 ]

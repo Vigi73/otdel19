@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blanks',
     'sert',
     'guest_book',
+    'phone',
 
 ]
 
