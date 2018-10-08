@@ -1,4 +1,5 @@
 {% extends 'm_blog/base_m_blog.html' %}
+{% load static %}
 
 {% block title %}
     Главная - {{ block.super }}
@@ -6,6 +7,11 @@
 
 
 {% block content %}
+
+    <div class="text-center mb-1 " >
+        <img src="{% static 'img/desk.png' %}" width="1090" alt="kll">
+    </div>
+
 
     {% for post in page_object %}
 
