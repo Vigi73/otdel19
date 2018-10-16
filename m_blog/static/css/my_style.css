@@ -58,7 +58,8 @@ body {
 
 /*Фон сообщения*/
 .card {
-    background-color: #fff8cc;
+    background:  url('../img/fon/Kletochka.gif') #fff8cc;
+
 
 }
 
