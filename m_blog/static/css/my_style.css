@@ -144,3 +144,10 @@ input[type=submit] {
     margin-left: 40px;
 
 }
+
+/*Аттач файла*/
+#dwFile {
+    text-decoration: none;
+    color: #0E2231;
+
+}
