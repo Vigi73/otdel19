@@ -44,4 +44,5 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'm_blog/post_detai.html', {'post': post})
+    f = str(post.files).split('/')[-1]
+    return render(request, 'm_blog/post_detai.html', {'post': post, 'file_name': f})

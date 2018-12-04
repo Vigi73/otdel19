@@ -147,6 +147,8 @@ input[type=submit] {
 
 /*Аттач файла*/
 #dwFile {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    font-size: small;
     text-decoration: none;
     color: #0E2231;
 
