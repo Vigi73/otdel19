@@ -44,5 +44,11 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    f = str(post.files).split('/')[-1]
-    return render(request, 'm_blog/post_detai.html', {'post': post, 'file_name': f})
+    f_name = str(post.files).split('/')[-1]  # get file name
+    try:
+        f_size = str(round(post.files.size /1024, 1)) + 'Kb'
+    except:
+        f_size = ''
+
+    return render(request, 'm_blog/post_detai.html', {'post': post, 'file_name': f_name,
+                                                      'f_size': f_size})
