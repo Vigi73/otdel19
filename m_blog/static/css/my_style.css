@@ -1,5 +1,6 @@
 body {
     background: url('../img/fon/kamenka.gif');
+
 }
 
 .card-header {
@@ -162,6 +163,7 @@ input[type=submit] {
 body {
  /*background: #111;*/
  font-family: "Open Sans";
+
 }
 
 .area {
