@@ -1,5 +1,6 @@
 body {
     background: url('../img/fon/kamenka.gif');
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 
 }
 
@@ -160,11 +161,6 @@ input[type=submit] {
 /*Текст анимация*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body {
- /*background: #111;*/
- font-family: "Open Sans";
-
-}
 
 .area {
   text-align: center;
