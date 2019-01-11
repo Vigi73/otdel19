@@ -9,7 +9,7 @@
     <div class="card m-2">
                 <div class="card-header">
                    <img src="http://thalang.kajonkietsuksa.ac.th/wp-content/uploads/2014/01/calendar-1-featured-1000x750-300x300.png" width="65"  alt="calendar"> {{ post.date_create }}
-                                    <div style="position:absolute; left:0%; top:0px;"><img src="http://uploads.ru/i/g/y/z/gyzOa.png" width="100" border="0" /></div>
+{#                                    <div style="position:absolute; left:0%; top:0px;"><img src="http://uploads.ru/i/g/y/z/gyzOa.png" width="100" border="0" /></div>#}
                 </div>
                 <div class="card-body">
                     <h2 class="card-title"><i class="fa fa-file-text-o" aria-hidden="true"></i> {{ post.title }}</h2>
@@ -20,7 +20,7 @@
                         {% endautoescape %}
 
                     {% if post.files %}
-
+                        <br>
                         <p class="text-right mmm">
                             <a id="dwFile" title="Скачать файл." href="/{{ post.files }}"><img width="30" src="http://demiart.ru/forum/uploads9/post-1992373-1330590709.gif"> Файл:
                                  <b>{{ file_name }}</b><br>
