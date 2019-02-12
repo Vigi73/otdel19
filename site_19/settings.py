@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'bd+3ev-bqo4#ijl=c&e_vkczap7vq6+yr3-yr5(eh2e-(st_=5'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*', '127.0.0.1', 'otdel19.pythonanywhere.com']
-
 
 # Application definition
 
@@ -64,7 +62,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-                    os.path.join(BASE_DIR, 'templates')
+            os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -80,7 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'site_19.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -90,7 +87,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -110,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -123,7 +118,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -145,7 +139,7 @@ CKEDITOR_CONFIGS = {
 
         'skin': 'moono',
 
-        #'skin': 'office2013',
+        # 'skin': 'office2013',
 
         'toolbar_Basic': [
 
@@ -247,7 +241,7 @@ CKEDITOR_CONFIGS = {
 
                 'autogrow',
 
-                #'devtools',
+                # 'devtools',
 
                 'widget',
 
@@ -270,4 +264,3 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_BROWSE_SHOW_DIRS = True
-
