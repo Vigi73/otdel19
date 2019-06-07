@@ -8,7 +8,7 @@ class Post(models.Model):
     title = models.CharField(verbose_name='Заголовок', max_length=200)
     text = RichTextField(verbose_name='Контент сообщения')
     files = models.FileField(verbose_name='Аттач файл', null=True, blank=True, upload_to='static/files/upload_to/')
-    date_create = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+    date_create = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
 
     class Meta:
         db_table = 'Объявления'
