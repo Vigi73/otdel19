@@ -10,11 +10,21 @@
 
     <div class="text-center mb-1 " >
 
+    <h3 id="newYear"></h3>
+
+    <script type="text/javascript" language="JavaScript">
+var now = new Date();
+var ny = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);
+document.getElementById('newYear').innerText = 'До Нового Года осталось: ' + Math.floor((ny.getTime() - now.getTime()) / 86400000) + ' дней';
+</script>
+
+
+{##}
 {#        <img src="https://res.cloudinary.com/nflclubs/image/private/t_q-best/rams/mk4ahvejnuitjh8nd9mj" width="1090" alt="kll">#}
 {#        <img src="https://brauplatz.ru/images/pic/count-border.png" width="1000"  alt="kll">#}
 {#        <img src="{% static 'img/m.png' %}" width="1090" alt="kll">#}
 {#    <div class="area"><i class="fa fa-tree" aria-hidden="true"></i> С наступающим 2019 годом! <i class="fa fa-tree" aria-hidden="true"></i></div>#}
-
+{##}
 
 
 {#        <script src="http://megatimer.ru/s/668781c8c2fc0755c9132988b4cd4b5d.js"></script>#}
@@ -35,7 +45,7 @@
 {#<param name="wmode" value="transparent">#}
 {#</object>#}
 
-    <script src="//101widgets.com/w1421106530-04027611v3pro&290&34"></script>
+{#    <script src="//101widgets.com/w1421106530-04027611v3pro&290&34"></script>#}
 
     </div>
 

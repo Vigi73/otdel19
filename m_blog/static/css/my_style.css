@@ -5,6 +5,10 @@ body {
 
 }
 
+#newYear {
+    color: #fff;
+}
+
 .card-header {
     background: #6e6b5e;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
