@@ -9,14 +9,15 @@
 {% block content %}
 
     <div class="text-center mb-1 " >
+        <div id="newYear">До Нового Года осталось:</div>
+        <script src="//megatimer.ru/get/67488ab4309dac68a6ddf192727b5dc7.js"></script>
+{#    <h3 id="newYear"></h3>#}
 
-    <h3 id="newYear"></h3>
-
-    <script type="text/javascript" language="JavaScript">
-var now = new Date();
-var ny = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);
-document.getElementById('newYear').innerText = 'До Нового Года осталось: ' + Math.floor((ny.getTime() - now.getTime()) / 86400000) + ' дней';
-</script>
+{#    <script type="text/javascript" language="JavaScript">#}
+{#        var now = new Date();#}
+{#        var ny = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);#}
+{#        document.getElementById('newYear').innerText = 'До Нового Года осталось: ' + Math.floor((ny.getTime() - now.getTime()) / 86400000) + ' дней';#}
+{#    </script>#}
 
 
 {##}
