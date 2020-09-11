@@ -46,7 +46,7 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     f_name = str(post.files).split('/')[-1]  # get file name
     try:
-        f_size = str(round(post.files.size /1024, 1)) + 'Kb'
+        f_size = post.files.size
     except:
         f_size = ''
 
