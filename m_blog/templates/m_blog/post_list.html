@@ -8,9 +8,42 @@
 
 {% block content %}
 
-    <div class="text-center mb-1 " >
-        <div id="newYear">До Нового Года осталось:</div>
-        <script src="//megatimer.ru/get/67488ab4309dac68a6ddf192727b5dc7.js"></script>
+{#    Счетчик нового года#}
+    <div class="text-center mb-1 ">
+        <script src="https://e-timer.ru/js/etimer.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery(".eTimer").eTimer({
+                    etType: 0,
+                    etDate: "01.01.2021.0.0",
+                    etTitleText: "До нового года осталось",
+                    etTitleSize: 20,
+                    etShowSign: 1,
+                    etSep: ":",
+                    etFontFamily: "Verdana",
+                    etTextColor: "#a3a3a3",
+                    etPaddingTB: 15,
+                    etPaddingLR: 15,
+                    etBackground: "#333333",
+                    etBorderSize: 0,
+                    etBorderRadius: 2,
+                    etBorderColor: "white",
+                    etShadow: " 0px 0px 10px 0px #333333",
+                    etLastUnit: 4,
+                    etNumberFontFamily: "Impact",
+                    etNumberSize: 35,
+                    etNumberColor: "white",
+                    etNumberPaddingTB: 0,
+                    etNumberPaddingLR: 8,
+                    etNumberBackground: "#11abb0",
+                    etNumberBorderSize: 0,
+                    etNumberBorderRadius: 5,
+                    etNumberBorderColor: "white",
+                    etNumberShadow: "inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5)"
+                });
+            });
+        </script>
+        <div class="eTimer"></div>
     </div>
 
 
@@ -19,9 +52,10 @@
         <div class="card m-2">
             <div class="card-header">
 
-                <img src="http://thalang.kajonkietsuksa.ac.th/wp-content/uploads/2014/01/calendar-1-featured-1000x750-300x300.png" width="65"  alt="calendar">  {{ post.date_create }}
+                <img src="http://thalang.kajonkietsuksa.ac.th/wp-content/uploads/2014/01/calendar-1-featured-1000x750-300x300.png"
+                     width="65" alt="calendar"> {{ post.date_create }}
 
-{#                <div style="position:absolute; left:0%; top:0px;"><img src="http://uploads.ru/i/g/y/z/gyzOa.png" width="100" border="0" /></div>#}
+                {#                <div style="position:absolute; left:0%; top:0px;"><img src="http://uploads.ru/i/g/y/z/gyzOa.png" width="100" border="0" /></div>#}
             </div>
             <div class="card-body">
                 <a href="{% url 'post_detail_url' pk=post.pk %}"><h2 class="card-title"><i class="fa fa-file-text-o"
@@ -46,37 +80,37 @@
     {% endfor %}
 
 
-   {% if is_paginated %}
+    {% if is_paginated %}
 
 
-                <nav aria-label="..." >
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item {% if not prev_url %} disabled {% endif %}">
-                            <a class="page-link" href="{{ prev_url }}" tabindex="-1">Назад</a>
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+                <li class="page-item {% if not prev_url %} disabled {% endif %}">
+                    <a class="page-link" href="{{ prev_url }}" tabindex="-1">Назад</a>
+                </li>
+
+
+                {% for n in page_object.paginator.page_range %}
+                    {% if page_object.number == n %}
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ n }}">{{ n }} <span
+                                    class="sr-only">(current)</span></a>
                         </li>
 
-
-                        {% for n in page_object.paginator.page_range %}
-                            {% if page_object.number == n %}
-                                <li class="page-item active">
-                                    <a class="page-link" href="?page={{ n }}">{{ n }} <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-
-                            {% elif n > page_object.number|add:-3 and n < page_object.number|add:3 %}
-                                <li class="page-item">
-                                    <a class="page-link" href="?page={{ n }}">{{ n }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-
-                        <li class="page-item {% if not next_url %} disabled {% endif %}">
-                            <a class="page-link" href="{{ next_url }}" tabindex="-1">Следующая</a>
+                    {% elif n > page_object.number|add:-3 and n < page_object.number|add:3 %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ n }}">{{ n }}</a>
                         </li>
-                    </ul>
-                </nav>
+                    {% endif %}
+                {% endfor %}
 
-   {% endif %}
+                <li class="page-item {% if not next_url %} disabled {% endif %}">
+                    <a class="page-link" href="{{ next_url }}" tabindex="-1">Следующая</a>
+                </li>
+            </ul>
+        </nav>
+
+    {% endif %}
 
 
 {% endblock %}
