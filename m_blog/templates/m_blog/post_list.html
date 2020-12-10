@@ -8,8 +8,9 @@
 
 {% block content %}
 
-{#    Счетчик нового года#}
+    {#    Счетчик нового года#}
     <div class="text-center mb-1 ">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="https://e-timer.ru/js/etimer.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function () {
@@ -45,7 +46,7 @@
         </script>
         <div class="eTimer"></div>
     </div>
-
+    {#    End Счетчик нового года#}
 
     {% for post in page_object %}
 
